@@ -220,7 +220,7 @@ This approach reduces unnecessary filter ambiguity and provides predictable beha
 | **Primary / Lookup Table (1)**  | **Related Table (*)** | **Key**                 | **Cross-Filter Direction** |
 | ------------------------------- | --------------------- | ----------------------- | -------------------------- |
 | `DateTable`                     | `orders`              | Date → Order Date       | Single                     |
-| `customers`                     | `orders`              | `customer_id`           | Single                     |
+| `customers`                     | `orders`              | `customer_id`           | Both (1:1)                     |
 | `orders`                        | `order_items`         | `order_id`              | Single / Both*             |
 | `orders`                        | `order_payments`      | `order_id`              | Single                     |
 | `orders`                        | `order_reviews`       | `order_id`              | Single                     |
@@ -229,7 +229,7 @@ This approach reduces unnecessary filter ambiguity and provides predictable beha
 | `product_category_name_english` | `products`            | `product_category_name` | Single                     |
 | `geolocation`                   | `customers`           | `zip_code_prefix`       | Single                     |
 
-> **Note:** `Both*` should only be used if bidirectional filtering is intentionally configured in the final Power BI model for a specific analytical requirement. Otherwise, single-direction filtering is preferred.
+> **Note:** `Both*` is intentionally configured in the final Power BI model for a specific analytical requirement. Otherwise, single-direction filtering is preferred.
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-The purpose of the data-cleaning process was to transform the raw Brazilian E-Commerce (Olist) CSV datasets into a reliable, analysis-ready dataset for Power BI.
+The purpose of the data-cleaning process was to transform the raw [Brazilian E-Commerce (Olist)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) CSV datasets into a reliable, analysis-ready dataset for Power BI.
 
 The cleaning and transformation process was performed primarily using **Power Query (M)**.
 

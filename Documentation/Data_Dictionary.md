@@ -2,7 +2,7 @@
 
 ## 1. Dataset Overview
 
-This project uses the **Brazilian E-Commerce Public Dataset by Olist**, sourced via Kaggle, to build an end-to-end sales and e-commerce analytics solution in Microsoft Power BI.
+This project uses the **[Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)**, sourced via Kaggle, to build an end-to-end sales and e-commerce analytics solution in Microsoft Power BI.
 
 The dataset contains transactional, customer, seller, product, payment, review, and geographic information. The data is maintained across multiple related tables, each representing a different business entity or transaction grain.
 

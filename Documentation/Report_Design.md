@@ -521,52 +521,25 @@ This establishes a consistent hierarchy:
 
 ### 3.4 Charts
 
-Chart selection is generally aligned with the analytical question.
+3.4 Chart Selection
 
-  -----------------------------------------------------------------------
-  Analytical Question                 Visual Used
-  ----------------------------------- -----------------------------------
-  How do sales and order volume       Line/trend chart
-  change over time?                   
+Chart types were selected according to the analytical question being addressed.
 
-  Which categories generate the most  Horizontal bar chart
-  revenue?                            
+Analytical Question	Visual Used
+How do sales and order volume change over time?	Line / Trend Chart
+Which categories generate the most revenue?	Horizontal Bar Chart
+How is revenue distributed by payment method?	Doughnut Chart
+Which states contribute the most revenue?	Treemap
+What are the exact category values?	Table
+How does payment value vary by installments?	Column Chart
+Is product weight related to shipping cost?	Scatter Plot
+How does delivery compare against an SLA/performance scale?	Gauge
+How do actual and estimated delivery times compare?	Horizontal Bar Chart
+How are review scores distributed across categories?	100% Stacked Bar Chart
+Does delivery time relate to review scores?	Line Chart
+Which sellers meet specific performance criteria?	Table
 
-  How is revenue distributed by       Doughnut chart
-  payment method?                     
-
-  Which states contribute the most    Treemap
-  revenue?                            
-
-  What are the exact category values? Table
-
-  How does payment value vary by      Column chart
-  installments?                       
-
-  Is product weight related to        Scatter plot
-  shipping cost?                      
-
-  How does delivery compare with an   Gauge
-  SLA/performance scale?              
-
-  How do actual and estimated         Horizontal bar chart
-  delivery times compare?             
-
-  How are review scores distributed   100% stacked bar chart
-  across categories?                  
-
-  Does delivery time relate to review Line chart
-  scores?                             
-
-  Which sellers meet specific         Table
-  performance criteria?               
-
-  How does a seller perform by        Table and horizontal bar chart
-  category/order?                     
-  -----------------------------------------------------------------------
-
-The report therefore avoids relying on a single visual type and instead
-uses different visual forms according to the analytical requirement.
+The report therefore avoids relying on a single visual type and instead matches visualization methods to analytical requirements.
 
 ------------------------------------------------------------------------
 

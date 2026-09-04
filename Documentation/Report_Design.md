@@ -922,10 +922,9 @@ The six-page structure provides a logical progression from sales
 performance to geographic performance, logistics, customer satisfaction,
 seller analysis, and individual seller details.
 
-The exported PDF confirms the visual structure, page organization, KPI
-usage, filtering controls, chart selection, tables, and seller-detail
-workflow described above. Technical interaction features that are not
-directly observable in a static PDF---such as exact drillthrough
-configuration, bookmarks, tooltip pages, and accessibility
-settings---should be verified against the original Power BI `.pbix`
-before being documented as implemented features.
+## Author
+[Pyae Khant Kyaw](https://www.linkedin.com/in/pyae-khant-kyaw-591726390/)
+
+## Source Data
+[Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
+

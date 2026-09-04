@@ -2,898 +2,812 @@
 
 ## 1. Design Philosophy
 
-The report is designed as a multi-page e-commerce analytics dashboard
-that moves from **high-level business performance** to **sales and
-geographic analysis**, then to **logistics**, **customer satisfaction**,
-and finally **seller-level detail**.
+The Power BI report is designed as a **multi-page e-commerce analytics dashboard** that moves progressively from high-level business performance toward detailed operational and seller analysis.
+
+The analytical journey follows:
+
+> **Business Overview → Sales & Geography → Logistics → Customer Satisfaction → Seller Analysis → Seller Details**
 
 The overall design prioritizes:
 
--   Clear KPI-driven summaries
--   Consistent page structure
--   Business-focused analytical questions
--   Interactive filtering
--   A balance between summary visuals and detailed tables
--   Progressive navigation from overview to detailed seller analysis
--   Readability through a light report background, white visual
-    containers, and blue/purple visual accents
+* Clear KPI-driven summaries.
+* Consistent page structure.
+* Business-focused analytical questions.
+* Interactive filtering.
+* A balance between summary visuals and detailed tables.
+* Progressive navigation from overview to detailed seller analysis.
+* Readability through a light report background, white visual containers, and blue/purple visual accents.
 
 The report contains six pages:
 
-1.  E-Commerce Sales Overview
-2.  Sales & Geographic Performance
-3.  Logistics & Supply Chain Operations
-4.  Customer Satisfaction & Seller Rating
-5.  Seller Analysis
-6.  Seller's Details
+1. **E-Commerce Sales Overview**
+2. **Sales & Geographic Performance**
+3. **Logistics & Supply Chain Operations**
+4. **Customer Satisfaction & Seller Rating**
+5. **Seller Analysis**
+6. **Seller's Details**
 
-The design is intended to allow a user to start with overall business
-performance and progressively investigate products, locations, delivery
-performance, customer reviews, and individual sellers.
+The design allows users to begin with overall business performance and progressively investigate products, geography, delivery performance, customer reviews, and individual sellers.
 
-------------------------------------------------------------------------
+---
 
-## 2. Report Structure
+# 2. Report Structure
 
-### Page 1 --- E-Commerce Sales Overview
+## 2.1 Page 1 — E-Commerce Sales Overview
 
-**Purpose**
+### Purpose
 
-The first page acts as the executive-level overview of the e-commerce
-business. It provides a concise view of sales, revenue, order value,
-customer reviews, delivery punctuality, product-category performance,
-and payment-method distribution.
+The first page acts as the executive-level overview of the e-commerce business.
 
-**Primary KPIs**
+It provides a concise view of:
 
-The page places key performance indicators near the top of the report:
+* Sales.
+* Revenue.
+* Order value.
+* Customer reviews.
+* Delivery punctuality.
+* Product-category performance.
+* Payment-method distribution.
 
--   Total Sales
--   Total Revenue
--   Average Order Value
--   Average Review
--   Punctuality %
+### Primary KPIs
 
-The KPI cards make the most important metrics immediately visible before
-the user moves into detailed visuals.
+The page highlights:
 
-**Filters**
+* Total Sales
+* Total Revenue
+* Average Order Value
+* Average Review
+* Punctuality %
 
-The page provides filters for:
+These KPI cards make the most important business metrics immediately visible before users move into detailed analysis.
 
--   Date
--   Year / Month
--   Product Category
+### Filters
 
-These filters allow the user to change the reporting context without
-leaving the overview page.
+* Date
+* Year / Month
+* Product Category
 
-**Main Visuals**
+These filters allow users to change the reporting context without leaving the overview page.
+
+### Main Visuals
 
 #### Monthly Sales & Orders Trend
 
-A combined trend visual compares monetary sales value with order volume
-over time.
+A combined trend visual compares sales value with order volume over time.
 
-This visual is useful for identifying:
+The visual helps identify:
 
--   Changes in sales activity
--   Changes in order volume
--   Periods of increasing or decreasing performance
--   The relationship between sales value and order volume
+* Changes in sales activity.
+* Changes in order volume.
+* Periods of increasing or decreasing performance.
+* The relationship between sales value and order volume.
 
 #### Top 10 Product Categories by Revenue
 
 A horizontal bar chart ranks the highest-revenue product categories.
 
-The horizontal orientation is appropriate because product-category names
-can be relatively long and are easier to read along the vertical axis.
+The horizontal layout provides additional space for longer category names and makes category comparisons easier to read.
 
 #### Total Revenue by Payment Type
 
-A doughnut chart presents the distribution of revenue across payment
-methods.
+A doughnut chart presents the distribution of revenue across payment methods.
 
-This provides a quick view of payment-method concentration and makes the
-dominant payment method immediately visible.
+This provides a quick view of payment-method concentration and highlights the dominant payment method.
 
-**Design Decision**
+### Design Decision
 
 The page follows an executive-dashboard structure:
 
-> Filters → KPIs → trend → category ranking → payment distribution
+> **Filters → KPIs → Trend → Category Ranking → Payment Distribution**
 
-This establishes a clear visual hierarchy from headline metrics to
-supporting analysis.
+This establishes a clear visual hierarchy from headline metrics to supporting analysis.
 
-------------------------------------------------------------------------
+---
 
-### Page 2 --- Sales & Geographic Performance
+## 2.2 Page 2 — Sales & Geographic Performance
 
-**Purpose**
+### Purpose
 
-This page focuses on sales volume, transaction activity, geographic
-performance, product-category performance, shipping cost, and
-installment behavior.
+This page shifts the focus from the overall business summary toward:
 
-**Primary KPIs**
+* Sales volume.
+* Transaction activity.
+* Geographic performance.
+* Product-category performance.
+* Shipping cost.
+* Installment behavior.
 
-The KPI section contains:
+### Primary KPIs
 
--   Unit Sold
--   Total Payments
--   Average Shipping Cost
--   Average Installments
--   Average Transaction Value
+* Unit Sold
+* Total Payments
+* Average Shipping Cost
+* Average Installments
+* Average Transaction Value
 
-These metrics shift the analytical focus from the overall revenue
-summary toward operational sales activity.
+These metrics provide greater visibility into operational sales activity and transaction behavior.
 
-**Filters**
+### Filters
 
-The page includes:
+* Date
+* Product Category
+* State
 
--   Date
--   Product Category
--   State
+The geographic filter allows regional performance to be investigated more precisely.
 
-The geographic filter supports more focused regional analysis.
-
-**Main Visuals**
+### Main Visuals
 
 #### Total Revenue by Customer State
 
-A treemap is used to compare revenue contribution across customer
-states.
+A treemap compares revenue contribution across customer states.
 
-The relative area of each state makes large revenue contributors
-visually prominent.
-
-This is useful for quickly identifying geographically important markets.
+The relative area of each state makes larger revenue contributors visually prominent and supports quick geographic comparison.
 
 #### Product Category Detail Table
 
-A table provides:
+The table provides exact values for:
 
--   Product Category
--   Total Units Sold
--   Total Revenue
--   Average Price
+* Product Category
+* Total Units Sold
+* Total Revenue
+* Average Price
 
-The table complements the visual analysis by providing exact values
-rather than relying only on graphical comparisons.
+The table complements graphical analysis by providing precise numerical values.
 
 #### Payment Value by Installment Method
 
 A column chart compares payment value across installment counts.
 
-The visual makes the concentration of payment value among lower
-installment counts easy to observe.
+This makes the distribution of payment value across installment methods easier to investigate.
 
-**Design Decision**
+### Design Decision
 
-This page intentionally combines:
+The page intentionally combines:
 
--   A visual geographic overview
--   Exact product-level values
--   Transaction/payment analysis
+* Geographic visualization.
+* Exact product-category values.
+* Payment and transaction analysis.
 
-This gives the user both visual comparison and detailed numerical
-information.
+This provides both high-level visual comparison and detailed numerical analysis.
 
-------------------------------------------------------------------------
+---
 
-### Page 3 --- Logistics & Supply Chain Operations
+## 2.3 Page 3 — Logistics & Supply Chain Operations
 
-**Purpose**
+### Purpose
 
-This page changes the analytical perspective from sales to fulfillment
-and logistics performance.
+This page changes the analytical perspective from sales performance to **fulfillment and logistics operations**.
 
-The page focuses on:
+The main analytical areas are:
 
--   Delivery time
--   On-time delivery
--   Delivery performance against an SLA goal
--   Actual versus estimated delivery time
--   Shipping cost and product weight
+* Delivery time.
+* On-time delivery.
+* SLA performance.
+* Actual versus estimated delivery time.
+* Shipping cost.
+* Product weight.
 
-**Filters**
+### Primary KPIs
 
-The page provides:
-
--   Date
--   Product Category
--   Customer State
-
-These filters allow logistics performance to be investigated by time,
-product category, and location.
-
-**Primary KPIs**
-
-The page highlights:
-
--   Actual Delivery Days
--   Average Delivery Time
--   On-Time Delivery Rate
--   Average Days Late
+* Actual Delivery Days
+* Average Delivery Time
+* On-Time Delivery Rate
+* Average Days Late
 
 The KPI arrangement gives delivery performance immediate visibility.
 
-**Main Visuals**
+### Filters
+
+* Date
+* Product Category
+* Customer State
+
+These filters allow logistics performance to be investigated by time, product category, and geography.
+
+### Main Visuals
 
 #### Shipping Cost vs Product Weight
 
 A scatter plot compares product weight with shipping cost.
 
-The visual is appropriate for exploring whether heavier products are
-associated with higher shipping costs and for identifying the
-distribution of observations.
+This visual supports investigation into whether heavier products are associated with higher shipping costs and helps identify the distribution of observations.
 
-A trend line is also visible, providing an additional indication of the
-overall relationship.
+A trend line provides an additional indication of the overall relationship.
 
 #### Delivery Performance Against SLA Goal
 
-A gauge visual presents the delivery performance value against a
-reference scale.
+A gauge visual presents delivery performance against a reference scale.
 
-This gives the user a compact way to assess the reported
-delivery-performance level.
+This provides a compact way to assess the reported delivery-performance level.
 
 #### Estimated vs Actual Delivery Days by State
 
 A clustered horizontal bar chart compares:
 
--   Actual Delivery Days
--   Estimated Delivery Days
+* Actual Delivery Days.
+* Estimated Delivery Days.
 
-by customer state.
+The comparison is presented by customer state to help identify geographic differences in delivery performance.
 
-The side-by-side comparison makes differences between expected and
-actual delivery performance easier to investigate.
+### Design Decision
 
-**Design Decision**
+Different visual forms are used for different analytical questions:
 
-The page uses different visual forms for different analytical questions:
+| Analytical Question                                  | Visual               |
+| ---------------------------------------------------- | -------------------- |
+| What is the current logistics performance?           | KPI Cards            |
+| Is product weight associated with shipping cost?     | Scatter Plot         |
+| How is delivery performing against the target/scale? | Gauge                |
+| How do actual and estimated delivery times compare?  | Horizontal Bar Chart |
 
--   KPI cards for headline logistics metrics
--   Scatter plot for relationship analysis
--   Gauge for performance against a target/scale
--   Horizontal bars for actual-versus-estimated comparison
+---
 
-------------------------------------------------------------------------
+## 2.4 Page 4 — Customer Satisfaction & Seller Rating
 
-### Page 4 --- Customer Satisfaction & Seller Rating
+### Purpose
 
-**Purpose**
+This page connects customer review performance with:
 
-This page connects customer review performance with product categories,
-delivery time, and seller performance.
+* Product categories.
+* Delivery time.
+* Seller performance.
 
-**Filters**
+It provides both aggregate customer-satisfaction analysis and seller-level performance investigation.
 
-The page provides:
+### Primary KPIs
 
--   Review Score
--   Month Name
--   Response Time Range
+* Total Reviews
+* Average Review
+* 5-Star Rating %
+* 1-Star Rating %
 
-These filters allow customer satisfaction results to be explored from
-multiple perspectives.
+Using both positive and negative rating indicators provides a more balanced view of customer satisfaction.
 
-**Primary KPIs**
+### Filters
 
-The page highlights:
+* Review Score
+* Month Name
+* Response Time Range
 
--   Total Reviews
--   Average Review
--   5-Star Rating %
--   1-Star Rating %
+These filters allow satisfaction and support-response results to be investigated from multiple perspectives.
 
-The use of both positive and negative rating indicators helps provide a
-balanced view of customer satisfaction.
-
-**Main Visuals**
+### Main Visuals
 
 #### Review of Top 10 Category by Revenue
 
-A 100% stacked horizontal bar chart displays the distribution of review
-scores across selected high-revenue product categories.
+A 100% stacked horizontal bar chart displays the distribution of review scores across selected high-revenue product categories.
 
-The five rating levels are shown separately:
+The five rating levels are represented separately:
 
--   1 Star
--   2 Star
--   3 Star
--   4 Star
--   5 Star
+* 1 Star
+* 2 Star
+* 3 Star
+* 4 Star
+* 5 Star
 
-Using a 100% stacked structure makes the composition of reviews easier
-to compare between categories.
+The 100% stacked structure emphasizes the composition of ratings and makes category-level distributions easier to compare.
 
 #### Impact of Delivery Time on Reviews
 
 A line chart examines review scores across different delivery times.
 
-This visual supports investigation into whether customer ratings vary
-with the number of days required for delivery.
+This supports investigation into whether customer ratings vary with the number of days required for delivery.
 
 #### Sellers with Perfect Ratings & 80+ Sales
 
-A table identifies sellers meeting the high-rating and sales-volume
-criteria.
+A table identifies sellers that meet the defined high-rating and sales-volume criteria.
 
-The table displays:
+Displayed fields include:
 
--   Seller Short ID
--   Completed Orders
--   Average Review Score
+* Seller Short ID
+* Completed Orders
+* Average Review Score
 
 #### Lowest-Rated Sellers: 1-Star, 80+ Sales
 
-A second table identifies sellers with very low ratings while
-maintaining a significant completed-order volume.
+A second table identifies sellers with very low ratings while maintaining a significant completed-order volume.
 
-This creates a useful contrast with the high-performing seller table.
+This provides a useful contrast with the high-performing seller group and helps identify sellers that may require further investigation.
 
-**Design Decision**
+### Design Decision
 
-The page combines customer-level and seller-level analysis. The top
-section provides aggregate customer satisfaction information, while the
-lower section highlights specific sellers requiring attention or
-recognition.
+The page combines aggregate customer-satisfaction analysis with seller-level investigation.
 
-------------------------------------------------------------------------
+The upper portion provides overall satisfaction patterns, while the lower section highlights specific sellers for recognition or further investigation.
 
-### Page 5 --- Seller Analysis
+---
 
-**Purpose**
+## 2.5 Page 5 — Seller Analysis
 
-The fifth page provides a seller-selection view.
+### Purpose
 
-The page presents seller IDs in a dedicated list, allowing the user to
-identify/select a seller for deeper investigation.
+The fifth page provides a dedicated seller-selection view.
 
-The design is intentionally simple compared with the other analytical
-pages because its role is primarily seller navigation/selection rather
-than broad KPI analysis.
+The page is intentionally simpler than the other analytical pages because its primary purpose is to support seller selection and navigation toward deeper seller analysis.
 
-**Visible Element**
+### Visible Element
 
--   Seller ID list
+* Seller ID list
 
-The PDF export does not expose the complete interaction configuration
-behind this page. Therefore, details such as the exact selection
-behavior, visual-level interactions, or whether the page is used as a
-navigation step cannot be confirmed from the PDF alone.
+The design provides a focused entry point into individual seller analysis.
 
-------------------------------------------------------------------------
+---
 
-### Page 6 --- Seller's Details
+## 2.6 Page 6 — Seller's Details
 
-**Purpose**
+### Purpose
 
-This page provides a detailed seller-level view after a seller has been
-selected.
+This page provides a detailed seller-level analytical view.
 
-The page moves from aggregated seller performance into individual seller
-metrics, product-category performance, customer review information, and
-order-level delivery analysis.
+The page moves from aggregated seller performance into:
 
-**Filters / Selection Controls**
+* Seller metrics.
+* Product-category performance.
+* Customer review information.
+* Order-level delivery analysis.
 
-The page contains:
+### Filters / Selection Controls
 
--   Seller ID
--   Year
--   Product Category
--   Order Status
+* Seller ID
+* Year
+* Product Category
+* Order Status
 
-A back-arrow navigation control is also visible, supporting movement
-back to the preceding report context.
+A back-arrow navigation control supports movement back toward the preceding seller-analysis context.
 
-**Primary KPIs**
+### Primary KPIs
 
-The seller detail page highlights:
+* Average Rating
+* Average Days Late
+* Total Sales
+* Completed Orders
 
--   Average Rating
--   Average Days Late
--   Total Sales
--   Completed Orders
+These KPIs provide an immediate summary of individual seller performance.
 
-These KPIs provide an immediate seller-performance summary.
-
-**Main Visuals and Tables**
+### Main Visuals and Tables
 
 #### Seller's Details Review Table
 
-A review-related table displays information including:
+A review-related table provides qualitative customer feedback, including:
 
--   Review score
--   Review comment title
--   Review comment message
--   Related review information
+* Review Score
+* Review Comment Title
+* Review Comment Message
+* Related review information
 
-This provides qualitative detail in addition to numerical seller
-metrics.
+This complements numerical seller metrics with customer-level feedback.
 
 #### Product Category Performance Table
 
 The table includes:
 
--   Product category
--   Completed orders
--   Average review score
--   Average freight cost per order
+* Product Category
+* Completed Orders
+* Average Review Score
+* Average Freight Cost per Order
 
-This allows the seller's performance to be investigated by product
-category.
+This allows seller performance to be investigated across product categories.
 
 #### Delivery Speed vs SLA
 
-A horizontal bar comparison shows actual delivery days against average
-estimated delivery days for individual orders.
+A horizontal bar comparison shows actual delivery days against average estimated delivery days for individual orders.
 
 This supports order-level investigation of delivery performance.
 
-**Design Decision**
+### Design Decision
 
-The seller detail page follows a diagnostic layout:
+The seller detail page follows a diagnostic structure:
 
-> Seller selection → headline performance → category detail → customer
-> feedback → order-level delivery analysis
+> **Seller Selection → Headline Performance → Category Detail → Customer Feedback → Order-Level Delivery Analysis**
 
-This makes the page appropriate for investigating an individual seller
-after a higher-level analysis has identified a seller of interest.
+This makes the page suitable for investigating an individual seller after higher-level analysis identifies a seller of interest.
 
-------------------------------------------------------------------------
+---
 
-## 3. Visual Design
+# 3. Visual Design
 
-### 3.1 Overall Theme
+## 3.1 Overall Theme
 
-The report uses a light visual presentation.
+The report uses a light visual presentation with a consistent visual language across the six pages.
 
-Across the pages, the design consistently uses:
+Key design characteristics include:
 
--   Light/near-white report backgrounds
--   White visual containers
--   Dark text for headings and labels
--   Blue as a prominent analytical accent
--   Additional purple, pink, orange, green, and other categorical
-    accents where multiple categories need to be distinguished
+* Light or near-white report backgrounds.
+* White visual containers.
+* Dark text for headings and labels.
+* Blue as a prominent analytical accent.
+* Additional categorical accents such as purple, pink, orange, and green where multiple categories need to be differentiated.
 
-The PDF export demonstrates a consistent visual language across the six
-pages.
+The visual language is kept consistent across pages so that users can focus on the analytical content rather than learning a different interface on each page.
 
-> Note: The exact Power BI theme JSON, font family, and color hex codes
-> cannot be confirmed from the PDF export alone.
+---
 
-------------------------------------------------------------------------
+## 3.2 Typography
 
-### 3.2 Typography
+The report uses:
 
-The report uses large, prominent page titles and smaller visual titles
-underneath.
+* Large, prominent page titles.
+* Smaller visual titles.
+* Concise and descriptive chart titles.
 
-The page title is visually separated from the analytical content, making
-the purpose of each page immediately clear.
+Examples include:
 
-Visual titles are concise and descriptive, for example:
+* `Monthly Sales & Orders Trend`
+* `Top 10 Product Categories by Revenue`
+* `Total Revenue by Customer State`
+* `Shipping Cost vs Product Weight`
+* `Impact of Delivery Time on Reviews`
+* `Delivery Speed vs SLA`
 
--   "Monthly Sales & Orders Trend"
--   "Top 10 Product Categories by Revenue"
--   "Total Revenue by Customer State"
--   "Shipping Cost vs Product Weight"
--   "Impact of Delivery Time on Reviews"
--   "Delivery Speed vs SLA"
+Descriptive visual titles communicate the analytical purpose without requiring additional explanation.
 
-This naming approach helps the user understand the analytical purpose of
-each visual without needing additional explanation.
+---
 
-The exact font family cannot be confirmed from the PDF export.
-
-------------------------------------------------------------------------
-
-### 3.3 KPI Cards
+## 3.3 KPI Cards
 
 KPI cards are used consistently across the report.
 
-Their general design includes:
+Their general structure includes:
 
--   Large metric value
--   Clear metric label
--   Compact card container
--   Strong visual separation from surrounding charts
+* Large metric value.
+* Clear metric label.
+* Compact card container.
+* Strong visual separation from surrounding charts.
 
-The KPI cards are positioned prominently near the top or left side of
-analytical pages.
+The KPI cards are positioned prominently near the top or left side of analytical pages.
 
 This establishes a consistent hierarchy:
 
-1.  What is the current performance?
-2.  Why is it changing?
-3.  Where is the performance coming from?
-4.  What requires deeper investigation?
+> **What is the current performance?**
+> ↓
+> **Why is it changing?**
+> ↓
+> **Where is the performance coming from?**
+> ↓
+> **What requires deeper investigation?**
 
-------------------------------------------------------------------------
+---
 
-### 3.4 Charts
-
-3.4 Chart Selection
+## 3.4 Chart Selection
 
 Chart types were selected according to the analytical question being addressed.
 
-Analytical Question	Visual Used
-How do sales and order volume change over time?	Line / Trend Chart
-Which categories generate the most revenue?	Horizontal Bar Chart
-How is revenue distributed by payment method?	Doughnut Chart
-Which states contribute the most revenue?	Treemap
-What are the exact category values?	Table
-How does payment value vary by installments?	Column Chart
-Is product weight related to shipping cost?	Scatter Plot
-How does delivery compare against an SLA/performance scale?	Gauge
-How do actual and estimated delivery times compare?	Horizontal Bar Chart
-How are review scores distributed across categories?	100% Stacked Bar Chart
-Does delivery time relate to review scores?	Line Chart
-Which sellers meet specific performance criteria?	Table
+| Analytical Question                                         | Visual Used            |
+| ----------------------------------------------------------- | ---------------------- |
+| How do sales and order volume change over time?             | Line / Trend Chart     |
+| Which categories generate the most revenue?                 | Horizontal Bar Chart   |
+| How is revenue distributed by payment method?               | Doughnut Chart         |
+| Which states contribute the most revenue?                   | Treemap                |
+| What are the exact category values?                         | Table                  |
+| How does payment value vary by installments?                | Column Chart           |
+| Is product weight related to shipping cost?                 | Scatter Plot           |
+| How does delivery compare against an SLA/performance scale? | Gauge                  |
+| How do actual and estimated delivery times compare?         | Horizontal Bar Chart   |
+| How are review scores distributed across categories?        | 100% Stacked Bar Chart |
+| Does delivery time relate to review scores?                 | Line Chart             |
+| Which sellers meet specific performance criteria?           | Table                  |
 
 The report therefore avoids relying on a single visual type and instead matches visualization methods to analytical requirements.
 
-------------------------------------------------------------------------
+---
 
-### 3.5 Tables
+## 3.5 Tables
 
-Tables are used where exact values and detailed records are more useful
-than graphical representation.
+Tables are used where exact values or detailed records are more useful than graphical representation.
 
 Examples include:
 
--   Product-category sales detail
--   High-performing sellers
--   Lowest-rated sellers
--   Seller category performance
--   Seller review information
--   Order-level delivery information
+* Product-category sales detail.
+* High-performing sellers.
+* Lowest-rated sellers.
+* Seller category performance.
+* Seller review information.
+* Order-level delivery information.
 
 The combination of charts and tables provides both:
 
--   Fast visual interpretation
--   Exact numerical/detail-level inspection
+* Fast visual interpretation.
+* Exact numerical or record-level inspection.
 
-------------------------------------------------------------------------
+---
 
-### 3.6 Slicers and Filters
+## 3.6 Slicers and Filters
 
-Slicers are positioned consistently near the top of the relevant pages.
+Slicers are positioned consistently near the top of relevant pages.
 
 Examples include:
 
--   Date
--   Year / Month
--   Product Category
--   State
--   Customer State
--   Review Score
--   Month Name
--   Response Time Range
--   Seller ID
--   Order Status
+* Date
+* Year / Month
+* Product Category
+* State
+* Customer State
+* Review Score
+* Month Name
+* Response Time Range
+* Seller ID
+* Order Status
 
-This placement keeps the filtering controls visible while preserving the
-main analytical area for KPIs and visuals.
+Filter selection changes according to the business purpose of each page rather than applying one identical filter set everywhere.
 
-The slicer choices also change according to the business purpose of each
-page rather than using the same filter set everywhere.
+This keeps the interaction model relevant without overwhelming the user with unnecessary controls.
 
-------------------------------------------------------------------------
+---
 
-## 4. Interactivity
+# 4. Interactivity
 
-The PDF export demonstrates the presence of multiple interactive report
-elements, particularly slicers and seller selection/detail navigation.
+## 4.1 Filtering
 
-### 4.1 Filtering
+Filtering is a core component of the report design.
 
-Filtering is a major part of the report design.
+Users can change the analytical context using dimensions such as:
 
-Users can filter the analysis by dimensions such as:
+* Time.
+* Product category.
+* Geographic state.
+* Review score.
+* Seller.
+* Order status.
 
--   Time
--   Product category
--   Geographic state
--   Review score
--   Seller
--   Order status
+This allows a single report to answer multiple analytical questions without requiring separate static reports.
 
-The filters allow the same report pages to answer multiple analytical
-questions without requiring separate static reports.
+---
 
-------------------------------------------------------------------------
+## 4.2 Seller-Level Navigation
 
-### 4.2 Seller-Level Navigation
+The report contains both a **Seller Analysis** page and a **Seller's Details** page.
 
-The report contains a dedicated Seller Analysis page and a Seller's
-Details page.
+The Seller's Details page includes a visible back-arrow control, supporting navigation back toward the previous seller-analysis context.
 
-The Seller's Details page contains a visible back-arrow control,
-indicating a navigation path back toward the previous report context.
+The intended analytical workflow is:
 
-The design supports a progression from:
+> **Seller List → Selected Seller → Seller Details**
 
-**Seller list → selected seller → seller details**
+The exact underlying Power BI interaction mechanism should match the actual `.pbix` configuration.
 
-The exact Power BI interaction configuration should be verified in the
-`.pbix` file before documenting it as a specific drillthrough or
-bookmark implementation.
+---
 
-------------------------------------------------------------------------
+## 4.3 Drill-Down
 
-### 4.3 Drill-Down
+Hierarchical analysis is used within the report where applicable.
 
-The PDF shows hierarchical fields and detailed visual analysis, but a
-static PDF cannot reliably prove the exact drill-down configuration used
-in the Power BI file.
+Any documented drill-down hierarchy should correspond directly to the hierarchy configured in Power BI Desktop.
 
-Therefore, drill-down should be documented here only after confirming
-the hierarchy and interaction settings in the `.pbix` file.
+---
 
-------------------------------------------------------------------------
+## 4.4 Drillthrough
 
-### 4.4 Drillthrough
+The report structure supports detailed investigation of seller performance through the Seller Analysis and Seller's Details pages.
 
-The report structure strongly supports a detailed seller-analysis
-workflow, particularly through the Seller Analysis and Seller's Details
-pages.
+Where the `.pbix` contains an explicit drillthrough configuration, the implementation should be documented using the actual drillthrough field and destination page.
 
-However, the PDF alone does not expose the page-level drillthrough
-configuration.
+---
 
-If the `.pbix` confirms that Seller's Details is configured as a
-drillthrough page, this section can be updated to state the exact
-drillthrough field and workflow.
+## 4.5 Tooltips
 
-------------------------------------------------------------------------
+Tooltips provide additional context where configured.
 
-### 4.5 Tooltips
+Examples may include compact seller identifiers or additional supporting values that would otherwise create unnecessary visual clutter.
 
-Tooltips are not independently visible in the static PDF export.
+Any custom tooltip page should be documented according to the actual configuration in the `.pbix`.
 
-Their configuration should therefore be confirmed in the `.pbix` before
-being documented as an implemented feature.
+---
 
-------------------------------------------------------------------------
+## 4.6 Bookmarks
 
-### 4.6 Bookmarks
+Bookmarks can be used to provide controlled navigation, alternate report states, or focused analytical views where implemented.
 
-Bookmarks cannot be reliably identified from the PDF export.
+The final documentation should use the actual bookmark names and purposes configured in Power BI Desktop.
 
-If bookmarks are used in the Power BI report, document the specific
-bookmark names and their purpose after checking the `.pbix` file.
+---
 
-------------------------------------------------------------------------
+# 5. Accessibility & Usability
 
-## 5. Accessibility & Usability
+The report includes several usability-oriented design choices.
 
-The report design includes several usability-oriented choices visible in
-the exported report.
+## 5.1 Clear Page Titles
 
-### Clear Page Titles
+Each page uses a descriptive title that communicates the business purpose of the page.
 
-Each page has a descriptive title that communicates the page's business
-purpose.
+---
 
-### Consistent Layout
+## 5.2 Consistent Layout
 
-The report maintains a consistent visual structure across pages:
+The report maintains a consistent structural pattern:
 
--   Page title area
--   Filter area
--   KPI area
--   Main analytical visuals
--   Detailed tables where required
+* Page title area.
+* Filter area.
+* KPI area.
+* Main analytical visuals.
+* Detailed tables where appropriate.
 
-This consistency reduces the amount of time users need to spend learning
-the interface.
+This consistency reduces the amount of time users need to spend learning the interface.
 
-### Visual Hierarchy
+---
 
-Large KPI values attract attention first, followed by chart titles and
-analytical visuals.
+## 5.3 Visual Hierarchy
 
-This makes the report suitable for both quick executive review and
-deeper analysis.
+Large KPI values attract attention first, followed by visual titles and analytical charts.
 
-### Color-Based Category Differentiation
+This allows the report to support both quick executive review and deeper analytical investigation.
 
-Several visuals use different colors to distinguish categories, payment
-methods, review scores, or other groups.
+---
 
-For review analysis, the five rating levels are explicitly separated,
-helping users compare the distribution of customer ratings.
+## 5.4 Color-Based Category Differentiation
 
-### Readability
+Different colors are used to distinguish categories, payment methods, review scores, and other groups where appropriate.
 
-The use of white visual containers against the light page background
-creates separation between individual analytical components.
+For review analysis, the five rating levels are separated visually to support comparison of customer-rating distributions.
 
-Long category and seller labels are supported by horizontal charts and
-tables where appropriate.
+---
 
-### Potential Accessibility Improvements
+## 5.5 Readability
 
-The PDF alone cannot confirm settings such as:
+White visual containers against the light report background provide separation between analytical components.
 
--   Alt text
--   Tab order
--   High-contrast configuration
--   Screen-reader optimization
--   Exact color-contrast ratios
+Long category names and seller identifiers are supported through horizontal charts and tables where appropriate.
 
-These should be checked directly in Power BI Desktop if accessibility is
-being formally documented.
+---
 
-------------------------------------------------------------------------
+## 5.6 Accessibility Considerations
 
-## 6. Design Decisions
+Accessibility should be reviewed in Power BI Desktop with particular attention to:
 
-### Decision 1 --- Use KPI Cards for Immediate Performance Visibility
+* Alt text.
+* Tab order.
+* Keyboard navigation.
+* Color contrast.
+* High-contrast requirements.
+* Screen-reader compatibility.
 
-Important measures are surfaced through KPI cards so users can
-understand overall performance before analyzing individual charts.
+These items form part of the usability and accessibility considerations for future refinement.
 
-### Decision 2 --- Organize the Report by Business Function
+---
 
-Rather than placing all metrics on one page, the report separates
-analysis into:
+# 6. Design Decisions
 
--   Sales
--   Geography
--   Logistics
--   Customer satisfaction
--   Seller performance
--   Seller detail
+## 6.1 Use KPI Cards for Immediate Performance Visibility
 
-This reduces information overload and creates a logical analytical
-journey.
+Important business measures are surfaced through KPI cards so users can understand current performance before analyzing individual charts.
 
-### Decision 3 --- Combine Summary and Detail
+---
 
-Charts provide rapid pattern recognition, while tables provide exact
-values and detailed records.
+## 6.2 Organize the Report by Business Function
+
+Rather than placing all metrics on one page, the report separates analysis into:
+
+* Sales.
+* Geography.
+* Logistics.
+* Customer satisfaction.
+* Seller performance.
+* Seller detail.
+
+This reduces information overload and creates a logical analytical journey.
+
+---
+
+## 6.3 Combine Summary and Detail
+
+Charts provide rapid pattern recognition, while tables provide exact values and detailed records.
 
 This is particularly useful for seller and product-category analysis.
 
-### Decision 4 --- Use Horizontal Bars for Long Category Names
+---
 
-Product categories and seller identifiers can be difficult to read in
-narrow vertical layouts.
+## 6.4 Use Horizontal Bars for Long Category Names
 
-Horizontal bars and tables provide more space for these labels.
+Product categories and seller identifiers can be difficult to read in narrow vertical layouts.
 
-### Decision 5 --- Use Dedicated Filters by Analytical Context
+Horizontal bar charts and tables provide additional space for these labels.
 
-The filters change according to the purpose of each page.
+---
 
-For example:
+## 6.5 Use Dedicated Filters by Analytical Context
 
--   Sales pages emphasize date, product category, and state.
--   Logistics emphasizes date, product category, and customer state.
--   Customer satisfaction emphasizes review score, month, and response
-    time.
--   Seller detail emphasizes seller, year, category, and order status.
+Filter selections are adapted to the purpose of each page.
 
-This keeps filtering relevant instead of overwhelming the user with
-unnecessary controls.
+Examples include:
 
-### Decision 6 --- Progress from Overview to Detail
+* Sales pages emphasize date, product category, and state.
+* Logistics emphasizes date, product category, and customer state.
+* Customer satisfaction emphasizes review score, month, and response time.
+* Seller detail emphasizes seller, year, category, and order status.
+
+This keeps filtering relevant instead of overwhelming the user with unnecessary controls.
+
+---
+
+## 6.6 Progress from Overview to Detail
 
 The report follows a natural analytical workflow:
 
-**Business overview → sales/geography → logistics → customer
-satisfaction → seller analysis → seller details**
+> **Business Overview → Sales & Geography → Logistics → Customer Satisfaction → Seller Analysis → Seller Details**
 
-This supports both high-level monitoring and root-cause investigation.
+This supports both high-level monitoring and deeper root-cause investigation.
 
-------------------------------------------------------------------------
+---
 
-## 7. Page-Level Design Summary
+# 7. Page-Level Design Summary
 
-  -----------------------------------------------------------------------
-  Page                    Primary Purpose         Main Design Pattern
-  ----------------------- ----------------------- -----------------------
-  E-Commerce Sales        Executive sales and     KPI + trend + ranking +
-  Overview                business overview       payment mix
+| Page                                  | Primary Purpose                             | Main Design Pattern                                       |
+| ------------------------------------- | ------------------------------------------- | --------------------------------------------------------- |
+| E-Commerce Sales Overview             | Executive sales and business overview       | KPI + Trend + Ranking + Payment Mix                       |
+| Sales & Geographic Performance        | Sales distribution and transaction analysis | KPI + Geography + Table + Installment Analysis            |
+| Logistics & Supply Chain Operations   | Delivery and shipping performance           | KPI + Scatter + Gauge + Comparison                        |
+| Customer Satisfaction & Seller Rating | Reviews and seller quality                  | KPI + Rating Distribution + Trend + Seller Tables         |
+| Seller Analysis                       | Seller selection                            | Seller List                                               |
+| Seller's Details                      | Individual seller investigation             | KPI + Category Detail + Review Detail + Delivery Analysis |
 
-  Sales & Geographic      Sales distribution and  KPI + geography +
-  Performance             transaction analysis    table + installment
-                                                  analysis
+---
 
-  Logistics & Supply      Delivery and shipping   KPI + scatter + gauge +
-  Chain Operations        performance             comparison
+# 8. Design Strengths
 
-  Customer Satisfaction & Reviews and seller      KPI + rating
-  Seller Rating           quality                 distribution + trend +
-                                                  seller tables
+The current report design provides several strengths.
 
-  Seller Analysis         Seller selection        Seller list
+### 8.1 Strong Business-Oriented Page Organization
 
-  Seller's Details        Individual seller       KPI + review detail +
-                          investigation           category table + order
-                                                  delivery
-  -----------------------------------------------------------------------
+Each page has a clear analytical purpose rather than combining unrelated metrics.
 
-------------------------------------------------------------------------
+### 8.2 Consistent KPI Usage
 
-## 8. Design Strengths
+Important measures are surfaced prominently so users can understand performance quickly.
 
-The current report design has several strengths:
+### 8.3 Combination of Visual and Tabular Analysis
 
-1.  **Strong business-oriented page organization**\
-    Each page has a clear analytical purpose.
+Charts provide pattern recognition while tables provide exact values and detailed records.
 
-2.  **Consistent KPI usage**\
-    Important metrics are surfaced prominently.
+### 8.4 Progressive Detail
 
-3.  **Good combination of visual and tabular analysis**\
-    Users can see trends and comparisons while still accessing exact
-    values.
+The report moves from high-level business performance toward individual seller and order analysis.
 
-4.  **Progressive detail**\
-    The report moves from high-level performance to individual
-    seller/order analysis.
+### 8.5 Context-Specific Filtering
 
-5.  **Context-specific filtering**\
-    Filters are relevant to the purpose of each page.
+Filters are selected according to the analytical purpose of each page.
 
-6.  **Variety of visual types**\
-    Line charts, bar charts, treemaps, scatter plots, gauges, doughnut
-    charts, and tables are used for different analytical questions.
+### 8.6 Variety of Visual Types
 
-7.  **Seller investigation workflow**\
-    The seller analysis/detail structure supports deeper investigation
-    of individual seller performance.
+Line charts, bar charts, treemaps, scatter plots, gauges, doughnut charts, and tables are used according to different analytical requirements.
 
-------------------------------------------------------------------------
+### 8.7 Seller Investigation Workflow
 
-## 9. Design Limitations / Future Improvements
+The Seller Analysis and Seller's Details pages provide a logical progression for deeper seller investigation.
 
-The following points are potential areas for future refinement:
+---
 
--   Verify and document the exact Power BI theme and color palette from
-    the `.pbix`.
--   Confirm whether drillthrough is configured and document the exact
-    drillthrough field.
--   Document any implemented bookmarks after checking the `.pbix`.
--   Document custom tooltip pages if they exist.
--   Review visual spacing and label density on pages containing many
-    categories or long identifiers.
--   Consider replacing or supplementing visuals that require scrolling
-    with more focused Top-N views where appropriate.
--   Verify accessibility settings such as alt text, tab order, and color
-    contrast.
--   Where appropriate, add explanatory subtitles or short annotations to
-    help non-technical users interpret complex visuals.
+# 9. Design Limitations & Future Improvements
 
-These are improvement/documentation considerations rather than claims
-that the existing report is incorrect.
+Potential areas for future refinement include:
 
-------------------------------------------------------------------------
+* Verify and document the exact Power BI theme, font, and color palette.
+* Confirm the precise drillthrough configuration and drillthrough fields.
+* Document implemented bookmarks and their purposes.
+* Document custom tooltip pages where applicable.
+* Review visual spacing and label density on pages containing many categories or long identifiers.
+* Consider focused Top-N views where dense visuals become difficult to interpret.
+* Review accessibility settings such as alt text, tab order, and color contrast.
+* Add explanatory subtitles or annotations where complex visuals could benefit from additional context.
 
-## 10. Summary
+These points represent opportunities for refinement rather than claims that the existing report is incorrect.
 
-The report uses a structured, business-focused Power BI design that
-moves from overall e-commerce performance toward increasingly detailed
-operational and seller-level analysis.
+---
 
-Its main design pattern is:
+# 10. Final Design Summary
+
+The report uses a structured, business-focused Power BI design that moves from overall e-commerce performance toward increasingly detailed operational and seller-level analysis.
+
+The primary interaction pattern is:
 
 > **Filter → KPI → Visual Analysis → Detailed Investigation**
 
-The six-page structure provides a logical progression from sales
-performance to geographic performance, logistics, customer satisfaction,
-seller analysis, and individual seller details.
+The six-page structure provides a logical progression from:
+
+> **Sales Performance → Geographic Performance → Logistics → Customer Satisfaction → Seller Analysis → Seller Details**
+
+This design provides both high-level business visibility and the ability to investigate operational drivers at increasingly granular levels.
+
+The report design therefore serves as the presentation layer of the Power BI solution, building on the cleaned dataset, semantic model, and DAX calculation layer documented elsewhere in the project.
+
 
 ## Author
 [Pyae Khant Kyaw](https://www.linkedin.com/in/pyae-khant-kyaw-591726390/)

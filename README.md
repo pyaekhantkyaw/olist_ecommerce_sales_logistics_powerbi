@@ -293,3 +293,6 @@ olist_ecommerce_sales_logistics_powerbi/
 ## 📊 Source Data
 
 [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (Kaggle)
+
+## 🚀 Check Out End-to-End Business Analytics with SQL, Python & Power BI 
+[GitHub Repository](https://github.com/pyaekhantkyaw/saleops_business_analysis.git)
